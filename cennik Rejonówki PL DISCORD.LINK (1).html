@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cennik Rang</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #0e0e0e;
+      color: #fff;
+      padding: 50px 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    h1 {
+      color: #00ffd5;
+      text-shadow: 0 0 10px #00ffd5;
+      margin-bottom: 40px;
+    }
+
+    .nav {
+      margin-bottom: 30px;
+    }
+
+    .nav button {
+      background: none;
+      border: 2px solid #00ffd5;
+      color: #00ffd5;
+      padding: 10px 20px;
+      margin: 0 5px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+
+    .nav button:hover,
+    .nav button.active {
+      background-color: #00ffd5;
+      color: #000;
+    }
+
+    .pricing-container {
+      display: none;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      max-width: 1200px;
+    }
+
+    .pricing-container.active {
+      display: flex;
+    }
+
+    .pricing-card {
+      background: #1b1b1b;
+      border: 2px solid #00ffd5;
+      border-radius: 10px;
+      padding: 30px;
+      width: 250px;
+      box-shadow: 0 0 20px rgba(0, 255, 213, 0.2);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .pricing-card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 30px rgba(0, 255, 213, 0.5);
+    }
+
+    .rank-title {
+      font-size: 22px;
+      font-weight: bold;
+      margin-bottom: 10px;
+      color: #00ffd5;
+    }
+
+    .price {
+      font-size: 28px;
+      font-weight: bold;
+      margin-bottom: 15px;
+    }
+
+    .features {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 20px 0;
+      color: #ccc;
+    }
+
+    .features li {
+      margin: 10px 0;
+    }
+
+    .buy-btn {
+      background-color: #00ffd5;
+      color: #000;
+      border: none;
+      padding: 12px 20px;
+      font-weight: bold;
+      cursor: pointer;
+      border-radius: 5px;
+      text-transform: uppercase;
+      transition: background 0.3s;
+    }
+
+    .buy-btn:hover {
+      background-color: #00cfa8;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Cennik Rang</h1>
+
+  <div class="nav">
+    <button class="tab-button active" onclick="showTab('rangi')">Rangi</button>
+    <button class="tab-button" onclick="showTab('dodatkowe')">Dodatkowe</button>
+  </div>
+
+  <!-- RANGI -->
+  <div class="pricing-container active" id="rangi">
+    <div class="pricing-card">
+      <div class="rank-title">TRIAL-SUPPORT</div>
+      <div class="price">9.99 zł</div>
+      <ul class="features">
+        <li>Ranga testowa</li>
+        <li>Podstawowe uprawnienia</li>
+      </ul>
+      <button class="buy-btn">STWÓRZ TICKETA</button>
+    </div>
+
+    <div class="pricing-card">
+      <div class="rank-title">SUPPORT</div>
+      <div class="price">15 zł</div>
+      <ul class="features">
+        <li>Wsparcie dla graczy</li>
+        <li>Dostęp do ticketów</li>
+      </ul>
+      <button class="buy-btn">STWÓRZ TICKETA</button>
+    </div>
+
+    <div class="pricing-card">
+      <div class="rank-title">MODERATOR</div>
+      <div class="price">25 zł</div>
+      <ul class="features">
+        <li>Moderacja serwera</li>
+        <li>Ban/kick warn</li>
+      </ul>
+      <button class="buy-btn">STWÓRZ TICKETA</button>
+    </div>
+
+    <div class="pricing-card">
+      <div class="rank-title">ADMIN</div>
+      <div class="price">35 zł</div>
+      <ul class="features">
+        <li>Pełne uprawnienia admina</li>
+        <li>Dostęp do logów</li>
+      </ul>
+      <button class="buy-btn">STWÓRZ TICKETA</button>
+    </div>
+
+    <div class="pricing-card">
+      <div class="rank-title">HEAD-ADMIN</div>
+      <div class="price">40 zł</div>
+      <ul class="features">
+        <li>Zarządzanie adminami</li>
+        <li>Pełna kontrola</li>
+      </ul>
+      <button class="buy-btn">STWÓRZ TICKETA</button>
+    </div>
+
+    <div class="pricing-card">
+      <div class="rank-title">NADZÓR SERWERA</div>
+      <div class="price">60 zł</div>
+      <ul class="features">
+        <li>Nadzór nad kadrą</li>
+        <li>Priorytetowe zgłoszenia</li>
+      </ul>
+      <button class="buy-btn">STWÓRZ TICKETA</button>
+    </div>
+
+    <div class="pricing-card">
+      <div class="rank-title">OPIEKUN SERWERA</div>
+      <div class="price">150 zł</div>
+      <ul class="features">
+        <li>Zarządzanie całym serwerem</li>
+        <li>Najwyższe uprawnienia</li>
+        <li>KUP I ZAWITAJ W SZEREGACH</li>
+      </ul>
+      <button class="buy-btn">STWÓRZ TICKETA</button>
+    </div>
+
+    <div class="pricing-card">
+      <div class="rank-title">CUSTOM RANGA (FULL CASE)</div>
+      <div class="price">320 zł</div>
+      <ul class="features">
+        <li>Unikalna ranga</li>
+        <li>Własna nazwa i kolor</li>
+        <li>Wszystkie możliwe uprawnienia</li>
+      </ul>
+      <button class="buy-btn">STWÓRZ TICKETA</button>
+    </div>
+  </div>
+
+  <!-- DODATKOWE -->
+  <div class="pricing-container" id="dodatkowe">
+    <div class="pricing-card">
+      <div class="rank-title">Zmiana koloru nicku</div>
+      <div class="price">5 zł</div>
+      <ul class="features">
+        <li>Dowolny kolor nicku</li>
+        <li>Obowiązuje na Discord/serwerze</li>
+      </ul>
+      <button class="buy-btn">STWÓRZ TICKETA</button>
+    </div>
+
+    <div class="pricing-card">
+      <div class="rank-title">Custom tag</div>
+      <div class="price">7 zł</div>
+      <ul class="features">
+        <li>Unikalny tag pod nickiem</li>
+        <li>Personalizacja profilu</li>
+      </ul>
+      <button class="buy-btn">STWÓRZ TICKETA</button>
+    </div>
+  </div>
+
+  <script>
+    function showTab(tabId) {
+      const tabs = document.querySelectorAll('.pricing-container');
+      const buttons = document.querySelectorAll('.tab-button');
+
+      tabs.forEach(tab => {
+        tab.classList.remove('active');
+        if (tab.id === tabId) {
+          tab.classList.add('active');
+        }
+      });
+
+      buttons.forEach(btn => btn.classList.remove('active'));
+      event.target.classList.add('active');
+    }
+  </script>
+
+</body>
+</html>
